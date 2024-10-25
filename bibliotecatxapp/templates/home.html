@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <div class="imagem-central">
+            <img src="{% static 'img/logo-principal.svg' %}" alt="SVG Image">
+        </div>
+        <nav class="nav-search">
+            <form action="{% url 'livros' %}" method="GET">
+                <input type="text" name="q" class="nav-search-input" placeholder="Busque um Livro">
+            </form>
+        </nav>
+    {% endblock %}

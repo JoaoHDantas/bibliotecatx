@@ -1,0 +1,16 @@
+.capa-livro img {
+    height: 150px;
+}
+
+.livro-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 13rem;
+    width: 9rem;
+    background-color: aqua;
+    justify-content: space-around;
+}
+h1 {
+    font-size: 1.5rem;
+}

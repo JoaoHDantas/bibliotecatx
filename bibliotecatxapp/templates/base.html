@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/basecss.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'img/prft-tx-pb.png' %}" alt="Imagem prefeirura de Teixeira PB" id="prft">
+        </nav>
+        <nav class="nav-search">
+            <form action="{% url 'livros' %}" method="GET">
+                <input type="text" name="q" class="nav-search-input" placeholder="Procure seu Livro">
+            </form>
+        </nav>
+    </header>
+
+    <nav>
+        <!-- Menu de navegação comum -->
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">Sobre</a></li>
+            <li><a href="/contact/">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Conteúdo específico será inserido aqui -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Biblioteca Teixeira PB. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
